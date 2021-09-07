@@ -1,16 +1,18 @@
 {
-  "name": "module-ts-template",
+  "name": "@macchiatojs/wrap-koa-compose",
   "version": "0.0.0",
-  "description": "",
+  "description": "The modern Koa-Style middleware composition helper for `koa-compose`.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "lint": "eslint . --ext .ts",
+    "lint:all": "eslint . --ext .ts",
+    "lint": "eslint ./src --ext .ts",
     "pretest": "rimraf dist",
-    "test": "mocha --exit",
+    "test": "mocha --recursive --exit",
+    "test:watch": "mocha --recursive --watch --exit",
     "build": "tsc -d",
     "precoverage": "rimraf coverage .nyc_output",
     "coverage": "nyc npm run test",
@@ -23,22 +25,47 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mongodb-helpers/module-ts-template.git"
+    "url": "git+https://github.com/macchiatojs/wrap-koa-compose.git"
   },
-  "keywords": [],
+  "keywords": [
+    "middleware",
+    "koaify",
+    "koa-style",
+    "koa-compose",
+    "wrap-koa-compose",
+    "compose",
+    "iterator"
+  ],
   "license": "MIT",
   "author": {
     "name": "imed jaberi",
     "email": "imed-jaberi@outlook.com",
     "url": "https://www.3imed-jaberi.com"
   },
-  "dependencies": {},
-  "devDependencies": {},
+  "peerDependencies": {
+    "koa-compose": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.18",
+    "@types/koa-compose": "^3.2.5",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^15.6.1",
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0",
+    "chai": "^4.3.4",
+    "eslint": "^7.27.0",
+    "koa-compose": "^4.1.0",
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  },
   "engines": {
     "node": ">= 14"
   },
   "bugs": {
-    "url": "https://github.com/mongodb-helpers/module-ts-template/issues"
+    "url": "https://github.com/macchiatojs/wrap-koa-compose/issues"
   },
-  "homepage": "https://github.com/mongodb-helpers/module-ts-template#readme"
+  "homepage": "https://github.com/macchiatojs/wrap-koa-compose#readme"
 }
