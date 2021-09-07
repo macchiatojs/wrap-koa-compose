@@ -1,6 +1,6 @@
 {
   "name": "@macchiatojs/wrap-koa-compose",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "The modern Koa-Style middleware composition helper for `koa-compose`.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
